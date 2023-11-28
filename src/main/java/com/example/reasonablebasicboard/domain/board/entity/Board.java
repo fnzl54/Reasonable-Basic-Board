@@ -6,11 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
 
 @Entity
 @Table(name = "board")
+@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Board {
 

@@ -16,4 +16,9 @@ class BoardAdapter implements BoardPort {
     boardRepository.save(board);
   }
 
+  @Override
+  public Board getBoard(final Long boardId) {
+    return boardRepository.findById(boardId)
+        .orElseThrow(() -> new IllegalArgumentException("게시글이 존재하지 않습니다."));
+  }
 }
