@@ -1,7 +1,9 @@
 package com.example.reasonablebasicboard.domain.board.dto;
 
+import lombok.Builder;
 import org.springframework.util.Assert;
 
+@Builder
 public record GetBoardResponse(long id, String title, String content
 ) {
   public GetBoardResponse {
